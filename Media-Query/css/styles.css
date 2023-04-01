@@ -1,0 +1,29 @@
+/* Reponsive a lo ancho */
+p {
+  font-size: 50px;
+  background-color: rgb(255, 0, 0);
+}
+
+@media (min-width: 600px) {
+  p {
+    font-size: 20px;
+    background-color: rgb(8, 240, 97);
+  }
+}
+
+@media (max-width: 500px) {
+  p {
+    font-size: 20px;
+    background-color: rgb(250, 16, 180);
+  }
+}
+
+/* imagen responsive */
+
+.cotainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+

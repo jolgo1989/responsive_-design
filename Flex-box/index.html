@@ -1,0 +1,553 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/Flex-box/css/styles.css" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>Contenedor con flex</h1>
+    <div class="container">
+      <div class="box-1"></div>
+      <div class="box-2"></div>
+    </div>
+
+    <h1>Contenedor con inline-flex</h1>
+    <div class="container-1">
+      <div class="box-3"></div>
+      <div class="box-4"></div>
+    </div>
+
+    <h1>flex-direction</h1>
+    <h2>flex-direction:row(Por defecto)</h2>
+    <div class="container-2">
+      <div class="box-5">1</div>
+      <div class="box-6">2</div>
+      <div class="box-7">3</div>
+      <div class="box-8">4</div>
+      <div class="box-9">5</div>
+    </div>
+
+    <h2>flex-direction: row-reverse</h2>
+    <div class="container-3">
+      <div class="box-5">1</div>
+      <div class="box-6">2</div>
+      <div class="box-7">3</div>
+      <div class="box-8">4</div>
+      <div class="box-9">5</div>
+    </div>
+
+    <div class="text">
+      <h2>flex-direction: column</h2>
+      <h2>flex-direction: column-reverse</h2>
+    </div>
+    <div class="container-columm">
+      <div class="container-4">
+        <div class="box-5">1</div>
+        <div class="box-6">2</div>
+        <div class="box-7">3</div>
+        <div class="box-8">4</div>
+        <div class="box-9">5</div>
+      </div>
+
+      <div class="container-5">
+        <div class="box-5">1</div>
+        <div class="box-6">2</div>
+        <div class="box-7">3</div>
+        <div class="box-8">4</div>
+        <div class="box-9">5</div>
+      </div>
+    </div>
+    <h1>Contenedores flex Multi-línea</h1>
+    <h2>flex-wrap: nowrap(Valor por defecto)</h2>
+    <div class="container-6">
+      <div>1</div>
+      <div>2</div>
+      <div>3</div>
+      <div>4</div>
+      <div>5</div>
+      <div>5</div>
+      <div>7</div>
+      <div>8</div>
+      <div>9</div>
+      <div>10</div>
+      <div>11</div>
+      <div>12</div>
+    </div>
+    <h1>flex-wrap: wrap</h1>
+    <div class="container-7">
+      <div>1</div>
+      <div>2</div>
+      <div>3</div>
+      <div>4</div>
+      <div>5</div>
+      <div>5</div>
+      <div>7</div>
+      <div>8</div>
+      <div>9</div>
+      <div>10</div>
+      <div>11</div>
+      <div>12</div>
+    </div>
+
+    <h1>flex-wrap: wrap-reverse</h1>
+    <div class="container-8">
+      <div>1</div>
+      <div>2</div>
+      <div>3</div>
+      <div>4</div>
+      <div>5</div>
+      <div>5</div>
+      <div>7</div>
+      <div>8</div>
+      <div>9</div>
+      <div>10</div>
+      <div>11</div>
+      <div>12</div>
+    </div>
+
+    <h1>justify-content</h1>
+    <h2>justify-content: flex-start(Por defecto)</h2>
+    <div class="container-9">
+      <div>1</div>
+      <div>2</div>
+      <div>3</div>
+      <div>4</div>
+      <div>5</div>
+      <div>5</div>
+      <div>7</div>
+      <div>8</div>
+      <div>9</div>
+      <div>10</div>
+      <div>11</div>
+      <div>12</div>
+    </div>
+
+    <h2>justify-content: flex-end</h2>
+    <div class="container-10">
+      <div>1</div>
+      <div>2</div>
+      <div>3</div>
+      <div>4</div>
+      <div>5</div>
+      <div>5</div>
+      <div>7</div>
+      <div>8</div>
+      <div>9</div>
+      <div>10</div>
+      <div>11</div>
+      <div>12</div>
+    </div>
+
+    <h2>justify-content: center</h2>
+    <div class="container-11">
+      <div>1</div>
+      <div>2</div>
+      <div>3</div>
+      <div>4</div>
+      <div>5</div>
+      <div>5</div>
+      <div>7</div>
+      <div>8</div>
+      <div>9</div>
+      <div>10</div>
+      <div>11</div>
+      <div>12</div>
+    </div>
+
+    <h2>justify-content: space-between</h2>
+    <h3>
+      Ubica el primer y ultimo elemento al pricipio y al final del eje pricipal
+      y el espacio disponible lo distribuye entre los elementos. (por eso su
+      nombre space-between)
+    </h3>
+    <div class="container-12">
+      <div>1</div>
+      <div>2</div>
+      <div>3</div>
+      <div>4</div>
+      <div>5</div>
+      <div>5</div>
+      <div>7</div>
+      <div>8</div>
+      <div>9</div>
+      <div>10</div>
+      <div>11</div>
+      <div>12</div>
+    </div>
+
+    <h2>justify-content: space-around</h2>
+    <h3>
+      Le asigna un mismo valor al primer y ultimo elemento , luego los elementos
+      que estan en el extremos le van asumar su valor a los elementos
+      siguienetes, ejemplo: supongamos que el elemento 1 tenga un espacio de
+      10px a la izquierda y derecha, el elemento 2 deberia tener un espacio de
+      20px porque se le suma el espacio del elemento uno , asi mismo sucede con
+      el elemento 12 y los que le siguen.
+    </h3>
+    <div class="container-13">
+      <div>1</div>
+      <div>2</div>
+      <div>3</div>
+      <div>4</div>
+      <div>5</div>
+      <div>5</div>
+      <div>7</div>
+      <div>8</div>
+      <div>9</div>
+      <div>10</div>
+      <div>11</div>
+      <div>12</div>
+    </div>
+
+    <h2>justify-content: space-evenly</h2>
+    <h3>
+      Asigna la misma cantidad de espacio a todos los elementos, ejemplo: si al
+      primer y ultimo elemento se le asigna un espacio de 10px , los elementos
+      siguientes deben tener el mismo espacio(10px)
+    </h3>
+    <div class="container-14">
+      <div>1</div>
+      <div>2</div>
+      <div>3</div>
+      <div>4</div>
+      <div>5</div>
+      <div>5</div>
+      <div>7</div>
+      <div>8</div>
+      <div>9</div>
+      <div>10</div>
+      <div>11</div>
+      <div>12</div>
+    </div>
+    <h1>align-items</h1>
+    <h2>align-items: stretch(Valor por defecto)</h2>
+    <h3>La propiedad align-items alineará los ítems sobre el eje cruzado.</h3>
+    <div class="container-15">
+      <div class="box-10">1</div>
+      <div class="box-11">2</div>
+      <div class="box-12">3</div>
+      <div class="box-13">4</div>
+      <div class="box-14">5</div>
+    </div>
+    <h2>Nota</h2>
+    <h3>
+      Cuando los elemento tienen diefinida su altura, el contenedor se ajusta a
+      la altura del iteams mas alto, en este caso box-13-1(En el codigo css
+      lleva este nombre el elemento 4)
+    </h3>
+    <div class="container-15-1">
+      <div class="box-10-1">1</div>
+      <div class="box-11-1">2</div>
+      <div class="box-12-1">3</div>
+      <div class="box-13-1">4</div>
+      <div class="box-14-1">5</div>
+    </div>
+
+    <h2>align-items:flex-start</h2>
+    <h3>La propiedad align-items alineará los ítems sobre el eje cruzado.</h3>
+    <div class="container-16">
+      <div>1</div>
+      <div>2</div>
+      <div>3</div>
+      <div>4</div>
+      <div>5</div>
+      <div>5</div>
+      <div>7</div>
+      <div>8</div>
+      <div>9</div>
+      <div>10</div>
+      <div>11</div>
+      <div>12</div>
+    </div>
+
+    <h2>align-items:flex-end</h2>
+    <h3>Los elementos se alinean al final</h3>
+    <div class="container-17">
+      <div>1</div>
+      <div>2</div>
+      <div>3</div>
+      <div>4</div>
+      <div>5</div>
+      <div>5</div>
+      <div>7</div>
+      <div>8</div>
+      <div>9</div>
+      <div>10</div>
+      <div>11</div>
+      <div>12</div>
+    </div>
+
+    <h2>align-items: center</h2>
+    <div class="container-18">
+      <div>1</div>
+      <div>2</div>
+      <div>3</div>
+      <div>4</div>
+      <div>5</div>
+      <div>5</div>
+      <div>7</div>
+      <div>8</div>
+      <div>9</div>
+      <div>10</div>
+      <div>11</div>
+      <div>12</div>
+    </div>
+
+    <h2>align-items: baseline</h2>
+    <h3>
+      Con la propiedad baseline los elemntos se alinean teniendo encuenta el
+      tamañano de la fuentes, para este caso utilizamos una fuente mayor a las
+      de demas (3)
+    </h3>
+    <div class="container-19">
+      <div class="box-15">1</div>
+      <div class="box-16">2</div>
+      <div class="box-17">3</div>
+      <div class="box-18">4</div>
+      <div class="box-19">5</div>
+    </div>
+
+    <h1>align-content</h1>
+    <h2>align-content: flex-start(Por defecto)</h2>
+    <h3>
+      La propiedad CSS align-content ajusta las líneas dentro de un contenedor
+      flex cuando hay espacio extra en el eje transversal. <br />
+      Nota: para trabajar con esta propiedad se debe utilizar flex-wrap: wrap,
+      ya que align-content permite ajutar los elemento cuando hay espacio extra
+      en el eje transversal.
+    </h3>
+    <div class="container-20">
+      <div>1</div>
+      <div>2</div>
+      <div>3</div>
+      <div>4</div>
+      <div>5</div>
+      <div>5</div>
+      <div>7</div>
+      <div>8</div>
+      <div>9</div>
+      <div>10</div>
+      <div>11</div>
+      <div>12</div>
+    </div>
+
+    <h2>align-content:flex-end</h2>
+    <div class="container-21">
+      <div>1</div>
+      <div>2</div>
+      <div>3</div>
+      <div>4</div>
+      <div>5</div>
+      <div>5</div>
+      <div>7</div>
+      <div>8</div>
+      <div>9</div>
+      <div>10</div>
+      <div>11</div>
+      <div>12</div>
+    </div>
+
+    <h2>align-content: center</h2>
+    <div class="container-22">
+      <div>1</div>
+      <div>2</div>
+      <div>3</div>
+      <div>4</div>
+      <div>5</div>
+      <div>5</div>
+      <div>7</div>
+      <div>8</div>
+      <div>9</div>
+      <div>10</div>
+      <div>11</div>
+      <div>12</div>
+    </div>
+
+    <h2>align-content: space-between</h2>
+    <div class="container-23">
+      <div>1</div>
+      <div>2</div>
+      <div>3</div>
+      <div>4</div>
+      <div>5</div>
+      <div>5</div>
+      <div>7</div>
+      <div>8</div>
+      <div>9</div>
+      <div>10</div>
+      <div>11</div>
+      <div>12</div>
+    </div>
+
+    <h2>align-content: space-around</h2>
+    <div class="container-24">
+      <div>1</div>
+      <div>2</div>
+      <div>3</div>
+      <div>4</div>
+      <div>5</div>
+      <div>5</div>
+      <div>7</div>
+      <div>8</div>
+      <div>9</div>
+      <div>10</div>
+      <div>11</div>
+      <div>12</div>
+    </div>
+
+    <h2>align-content: stretch</h2>
+    <h3>
+      Para que funcione align-content: stretch , los elementos no deben tener un
+      height
+    </h3>
+
+    <div class="container-25">
+      <div>1</div>
+      <div>2</div>
+      <div>3</div>
+      <div>4</div>
+      <div>5</div>
+      <div>5</div>
+      <div>7</div>
+      <div>8</div>
+      <div>9</div>
+      <div>10</div>
+      <div>11</div>
+      <div>12</div>
+    </div>
+
+    <h1>Propiedades aplicadas a los ítems flex</h1>
+    <h2>flex-grow</h2>
+    <h3>
+      Esta propiedad hara que los ítem se ajuste y tome todo el espacio
+      disponible del eje, o una proporción del espacio disponible si otro ítem
+      también puede crecer.<br />
+      Ejemplo: sin flex-grow
+    </h3>
+    <div class="container-26">
+      <div class="box-20">1</div>
+      <div class="box-21">2</div>
+      <div class="box-22">3</div>
+    </div>
+    <h2>Ejemplo:flex-grow de 1 en el elemento 3</h2>
+    <div class="container-27">
+      <div class="box-23">1</div>
+      <div class="box-24">2</div>
+      <div class="box-25">3</div>
+    </div>
+    <h2>
+      Ejemplo:flex-grow de 1 para el primer elemento, 2 para el segundo elemento
+      y 1 para el tercer elemento
+    </h2>
+    <div class="container-28">
+      <div class="box-26">1</div>
+      <div class="box-27">2</div>
+      <div class="box-28">3</div>
+    </div>
+
+    <h2>flex-shrink</h2>
+    <h3>
+      Esta propiedad controla como se contrae los elemento, un ítem con un valor
+      más alto de flex-shrink se contraerá más rápido que sus hermanos que
+      poseen valores menores. <br />
+      Nota:flex-shrink: 0, es su valor por defecto , lo aplique solo para el
+      ejemeplo.
+    </h3>
+
+    <div class="container-29">
+      <div class="box-29">1</div>
+      <div class="box-30">2</div>
+      <div class="box-31">3</div>
+    </div>
+
+    <h1>flex-basis</h1>
+    <h2>
+      Es una propiedad que se aplica a los hijos del container, al aplicarle un
+      valor este se expandera hasta el valor asignado, ejemplo:si uno de los
+      bloques le asignamos un valor de 800px, este solo se expandera hasta
+      llegar a su medida y no crecera mas , pero si se contrae, se reducira los
+      mas que pueda respetando el espacio de los demas bloques.
+    </h2>
+    <div class="container-30">
+      <div class="box-32">1</div>
+      <div class="box-33">2</div>
+      <div class="box-34">3</div>
+    </div>
+
+    <h1>align-self:auto(Valor por defecto)</h1>
+    <h2>
+      Esta propiedad permite que los elementos se ubiquen en el eje secundario
+      de forma individual
+    </h2>
+    <h2>align-self: flex-start</h2>
+    <div class="container-31">
+      <div class="box-35">1</div>
+      <div class="box-36">2</div>
+      <div class="box-37">3</div>
+    </div>
+
+    <h2>align-self: flex-end</h2>
+    <div class="container-32">
+      <div class="box-38">1</div>
+      <div class="box-39">2</div>
+      <div class="box-40">3</div>
+    </div>
+
+    <h2>align-items: center</h2>
+    <div class="container-33">
+      <div class="box-41">1</div>
+      <div class="box-42">2</div>
+      <div class="box-43">3</div>
+    </div>
+
+    <h2>align-self: baseline</h2>
+    <h3>
+      Esta propiedad permite que el elemento se ajuste a la primera linea del
+      texto que tenga en su contenedor, en otras palabras tiene encuenta el
+      contenido de cada caja caja para alinearse con la linea principal
+    </h3>
+    <div class="container-34">
+      <div class="box-44">1</div>
+      <div class="box-45">align-self: baseline</div>
+      <div class="box-46">align-self: baseline</div>
+    </div>
+
+    <h2>align-self: stretch</h2>
+    <div class="container-35">
+      <div class="box-47">1</div>
+      <div class="box-48">2</div>
+      <div class="box-49">3</div>
+    </div>
+
+    <h1>order(Valor por defecto 0)</h1>
+    <h2>
+      Indica el orden que van a tener los elementos <br />
+      en este ejemplo se aplico un order 1 al elemento 1 como este es mayor al
+      resto se ubica alfinal de la parte derecha
+    </h2>
+    <h2>order:1</h2>
+    <div class="container-36">
+      <div class="box-50">1</div>
+      <div class="box-51">2</div>
+      <div class="box-52">3</div>
+      <div class="box-53">4</div>
+      <div class="box-54">5</div>
+    </div>
+
+    <h2>order:-1</h2>
+    <h2>
+      en este ejemplo se aplico un order -1 al elemento 5 como este es menor al
+      resto se ubica alfinal de la parte izquierda.
+    </h2>
+    <div class="container-37">
+      <div class="box-55">1</div>
+      <div class="box-56">2</div>
+      <div class="box-57">3</div>
+      <div class="box-58">4</div>
+      <div class="box-59">5</div>
+    </div>
+  </body>
+</html>

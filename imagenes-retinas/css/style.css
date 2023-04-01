@@ -1,0 +1,10 @@
+/* La forma más sencilla de hacer que tus imágenes aparezcan correctamente en pantallas de alta resolución, tales como la "pantalla retina" de las MacBook Pros es definir sus valores de ancho width y de altura height como sólo la mitad de lo que es el archivo original. Aquí hay un ejemplo de una imagen que solo utiliza la mitad de la altura y ancho originales: */
+
+div {
+    display: flex;
+    justify-content: center;
+}
+.bosque {
+  height: 100px;
+  width: 100px;
+}

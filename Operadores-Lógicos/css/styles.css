@@ -1,0 +1,24 @@
+/* Operadores Lógicos
+Se pueden redactar queries utilizando operadores lógicos, incluyendo not, and, y only.
+
+Además se puede combinar múltiples queries en una lista separada por comas múltiples; si cualquiera de las queries en la lista es verdadera, la hoja de estilo asociada es aplicada. Esto es equivalente a una operación lógica "or". */
+
+/* La siguiente query solo retornara verdadero si la ventana tiene un ancho entre 480px y 780px */
+div {
+  width: 100%;
+  height: 200px;
+  background-color: black;
+}
+
+@media (min-width: 480px) and (max-width: 780px) {
+  div {
+    background-color: aqua;
+  }
+}
+
+/* Query solo si la pantalla esta en formato horizontal */
+@media (min-width: 700px) and (orientation: landscape) {
+  div {
+    background-color: brown;
+  }
+}

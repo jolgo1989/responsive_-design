@@ -1,0 +1,885 @@
+/* Un área del documento que contiene un flexbox es llamada contendedor flex. Para crear un contenedor flex, establecemos la propiedad del área del contenedor display como flex o inline-flex. Tan pronto como hacemos esto, los hijos directos de este contenedor se vuelven ítems flex. Como con todas las propiedades de CSS, se definen algunos valores iniciales, así que cuando creemos un contenedor flex todos los ítems flex contenidos se comportarán de la siguiente manera. */
+
+/* El contenedor con flex se comporta como un elemento en bloque  */
+body {
+  background-color: grey;
+}
+.container-6 {
+  display: flex;
+  flex-wrap: nowrap;
+  align-items: center;
+  gap: 20px;
+  background-color: gray;
+  height: 200px;
+}
+
+.box-1 {
+  width: 200px;
+  height: 200px;
+  background-color: #424270;
+}
+
+.box-2 {
+  width: 200px;
+  height: 200px;
+  background-color: #ac5232;
+}
+
+/* El contenedor con inline-flex se comporta como un elemento en line  */
+.container-1 {
+  display: inline-flex;
+  gap: 20px;
+  background-color: gray;
+}
+
+.box-3 {
+  width: 200px;
+  height: 200px;
+  background-color: #424270;
+}
+
+.box-4 {
+  width: 200px;
+  height: 200px;
+  background-color: #ac5232;
+}
+
+/* flex-direction: row y flex-direction: row-reverse
+
+ Al añadir la propiedad flex-direction en el contenedor flex nos permite cambiar la dirección de cómo los ítems son desplegados. Colocando flex-direction: row-reverse se mantendrá el despliegue a lo largo de la fila, sin embargo el inicio y final quedarán al revés del original.
+
+Si cambiamos flex-direction a column el eje principal se cambiará y los ítems aparecerán en una columna. Colocando column-reverse las líneas de inicio y fin serán nuevamente puestas al revés. */
+
+.container-2 {
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+  background-color: gray;
+}
+
+.container-3 {
+  display: flex;
+  flex-direction: row-reverse;
+  gap: 20px;
+  background-color: gray;
+}
+/* flex-direction: column y   flex-direction: column-reverse*/
+.container-columm {
+  display: flex;
+  margin-left: 70px;
+  gap: 300px;
+}
+.text {
+  display: flex;
+  gap: 50px;
+}
+/* Si cambiamos flex-direction a column el eje principal se cambiará y los ítems aparecerán en una columna. Colocando column-reverse las líneas de inicio y fin serán nuevamente puestas al revés. */
+.container-4 {
+  display: inline-flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.container-5 {
+  display: inline-flex;
+  flex-direction: column-reverse;
+  gap: 20px;
+}
+
+.box-5 {
+  width: 50px;
+  height: 50px;
+  background-color: #ac5232;
+}
+
+.box-6 {
+  width: 50px;
+  height: 50px;
+  background-color: #bece2f;
+}
+
+.box-7 {
+  width: 50px;
+  height: 50px;
+  background-color: #3297be;
+}
+
+.box-8 {
+  width: 50px;
+  height: 50px;
+  background-color: #c52690;
+}
+
+.box-9 {
+  width: 50px;
+  height: 50px;
+  background-color: #8dc428;
+}
+
+/* Contenedores flex Multi-línea con flex-wrap */
+
+/* Al colocarlo como nowrap, el cual es el valor inicial, estos se contraerán para calzar con el contenedor ya que usan los valores iniciales de flexbox que permiten que los ítems se contraigan. Al usar nowrap los ítems podrían salirse del margen si estos no pudieran contraerse, o no contraerse lo suficiente para ser calzados. */
+
+/* nowrap es valor por defecto*/
+.container-6 {
+  display: flex;
+  flex-wrap: nowrap;
+  padding: 10px;
+  background-color: antiquewhite;
+  margin-top: 20px;
+}
+.container-6 div {
+  width: 50px;
+  height: 50px;
+  margin: 5px;
+  background-color: crimson;
+}
+/* Para lograr repartirse en varias líneas añada la propiedad flex-wrap con el valor wrap. Cuando los ítems sean demasiados para desplegarlos en una línea, serán repartidos en la línea siguiente */
+.container-7 {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 10px;
+  background-color: antiquewhite;
+  margin-top: 20px;
+}
+.container-7 div {
+  width: 50px;
+  height: 50px;
+  margin: 10px;
+  background-color: crimson;
+}
+/*  flex-wrap: wrap-reverse 
+Al cambiar la resolución las cajas se organizan del ultimo numero al primero (12 a 1) */
+.container-8 {
+  display: flex;
+  flex-wrap: wrap-reverse;
+  padding: 10px;
+  background-color: antiquewhite;
+  margin-top: 20px;
+}
+.container-8 div {
+  width: 50px;
+  height: 50px;
+  margin: 10px;
+  background-color: crimson;
+}
+/* justify-content 
+El valor inicial es flex-start que alineará los ítems al inicio del margen del contenedor  */
+.container-9 {
+  display: flex;
+  justify-content: flex-start;
+  padding: 10px;
+  background-color: antiquewhite;
+  margin-top: 20px;
+}
+.container-9 div {
+  width: 50px;
+  height: 50px;
+  margin: 10px;
+  background-color: crimson;
+}
+/* flex-end para alinearlos al final */
+.container-10 {
+  display: flex;
+  justify-content: flex-end;
+  padding: 10px;
+  background-color: antiquewhite;
+  margin-top: 20px;
+}
+.container-10 div {
+  width: 50px;
+  height: 50px;
+  margin: 10px;
+  background-color: crimson;
+}
+
+.container-11 {
+  display: flex;
+  justify-content: center;
+  padding: 10px;
+  background-color: antiquewhite;
+  margin-top: 20px;
+}
+.container-11 div {
+  width: 50px;
+  height: 50px;
+  margin: 10px;
+  background-color: crimson;
+}
+
+/* space-between 
+ubica 
+para tomar todo el espacio sobrante después de que los ítems hayan sido colocados, y distribuir de forma pareja los ítems para que haya un espacio equitativo entre cada ítem */
+
+.container-12 {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px;
+  background-color: antiquewhite;
+  margin-top: 20px;
+}
+.container-12 div {
+  width: 50px;
+  height: 50px;
+  margin: 10px;
+  background-color: crimson;
+}
+
+/* space-around para crear un espacio equitativo a la derecha e izquierda de cada ítem. */
+.container-13 {
+  display: flex;
+  justify-content: space-around;
+  padding: 10px;
+  background-color: antiquewhite;
+  margin-top: 20px;
+}
+.container-13 div {
+  width: 50px;
+  height: 50px;
+  margin: 10px;
+  background-color: crimson;
+}
+
+.container-14 {
+  display: flex;
+  justify-content: space-evenly;
+  padding: 10px;
+  background-color: antiquewhite;
+  margin-top: 20px;
+}
+.container-14 div {
+  width: 50px;
+  height: 50px;
+  margin: 10px;
+  background-color: crimson;
+}
+
+/* El valor inicial para esta propiedad es stretch, razón por la cual los ítems se ajustan por defecto a la altura de su contenedor.*/
+
+.container-15 {
+  display: flex;
+  align-items: stretch;
+  gap: 20px;
+  background-color: antiquewhite;
+  height: 200px;
+}
+
+.box-10 {
+  width: 50px;
+  background-color: #ac5232;
+}
+
+.box-11 {
+  width: 50px;
+  background-color: #bece2f;
+}
+
+.box-12 {
+  width: 50px;
+  background-color: #3297be;
+}
+
+.box-13 {
+  width: 50px;
+  background-color: #c52690;
+}
+
+.box-14 {
+  width: 50px;
+  background-color: #8dc428;
+}
+/* Cuando los elemento tienen diefinida su altura altura el contenedor se ajusta a la altura del iteams mas alto, en este caso box-13-1  */
+.container-15-1 {
+  display: flex;
+  align-items: stretch;
+  gap: 20px;
+  background-color: antiquewhite;
+}
+
+.box-10-1 {
+  width: 50px;
+  height: 100px;
+  background-color: #ac5232;
+}
+
+.box-11-1 {
+  width: 50px;
+  height: 50px;
+  background-color: #bece2f;
+}
+
+.box-12-1 {
+  width: 50px;
+  height: 70px;
+  background-color: #3297be;
+}
+
+.box-13-1 {
+  width: 50px;
+  height: 120px;
+  background-color: #c52690;
+}
+
+.box-14-1 {
+  width: 50px;
+  height: 80px;
+  background-color: #8dc428;
+}
+
+.container-16 {
+  display: flex;
+  align-items: flex-start;
+  padding: 10px;
+  background-color: antiquewhite;
+  margin-top: 20px;
+  height: 200px;
+}
+.container-16 div {
+  width: 50px;
+  height: 50px;
+  margin: 10px;
+  background-color: crimson;
+}
+
+.container-17 {
+  display: flex;
+  align-items: flex-end;
+  padding: 10px;
+  background-color: antiquewhite;
+  margin-top: 20px;
+  height: 200px;
+}
+.container-17 div {
+  width: 50px;
+  height: 50px;
+  margin: 10px;
+  background-color: crimson;
+}
+
+.container-18 {
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  background-color: antiquewhite;
+  margin-top: 20px;
+  height: 200px;
+}
+.container-18 div {
+  width: 50px;
+  height: 50px;
+  margin: 10px;
+  background-color: crimson;
+}
+/*los elementos flexibles son ajustados de modo que sus bases queden alineadas. El elemento con la distancia mayor entre su límite transversal inicial y su base es combinado con el borde transversal de la línea. */
+.container-19 {
+  display: flex;
+  align-items: baseline;
+  gap: 20px;
+  background-color: antiquewhite;
+  height: 200px;
+}
+
+.box-15 {
+  width: 50px;
+  height: 100px;
+  background-color: #ac5232;
+}
+
+.box-16 {
+  width: 50px;
+  height: 70px;
+  background-color: #bece2f;
+}
+
+.box-17 {
+  width: 50px;
+  background-color: #3297be;
+  font-size: 4.5rem;
+}
+
+.box-18 {
+  width: 50px;
+  height: 120px;
+  background-color: #c52690;
+}
+
+.box-19 {
+  width: 50px;
+  height: 70px;
+  background-color: #8dc428;
+}
+/* La propiedad CSS align-content ajusta las líneas dentro de un contenedor flex cuando hay espacio extra en el eje transversal. */
+.container-20 {
+  display: flex;
+  flex-wrap: wrap;
+  height: 400px;
+  width: 500px;
+  align-content: flex-start;
+  background-color: antiquewhite;
+}
+.container-20 div {
+  padding: 20px;
+  margin: 5px;
+  height: 20px;
+  background-color: crimson;
+}
+/* Las líneas son ajustadas a partir del final del eje transversal. El borde transversal final de la última línea y el del contenedor flexible quedan unidos. Cada línea que precede es unida a la línea siguiente. */
+.container-21 {
+  display: flex;
+  flex-wrap: wrap;
+  height: 400px;
+  width: 500px;
+  align-content: flex-end;
+  background-color: antiquewhite;
+}
+.container-21 div {
+  padding: 20px;
+  margin: 5px;
+  height: 20px;
+  background-color: crimson;
+}
+/* Las líneas son ajustadas hacia el centro del contenedor flexible. Las líneas son unidas entre sí, y centradas dentro del contenedor. El espacio entre el borde transversal de inicio y la primera línea, y el que hay entre el borde transversal final y la última línea es el mismo. */
+.container-22 {
+  display: flex;
+  flex-wrap: wrap;
+  height: 400px;
+  width: 500px;
+  align-content: center;
+  background-color: antiquewhite;
+}
+.container-22 div {
+  padding: 20px;
+  margin: 5px;
+  height: 20px;
+  background-color: crimson;
+}
+/* Las líneas son distribuidas de manera uniforme en el contenedor flexible. El espaciado se hace de modo que la separación entre cualquier par de elementos adyacentes sea el mismo. Los bordes transversales de inicio y de fin del contenedor son unidos a los bordes de la primera y última línea, respectivamente. */
+.container-23 {
+  display: flex;
+  flex-wrap: wrap;
+  height: 400px;
+  width: 500px;
+  align-content: space-between;
+  background-color: antiquewhite;
+}
+.container-23 div {
+  padding: 20px;
+  margin: 5px;
+  height: 20px;
+  background-color: crimson;
+}
+/* todo: Las líneas son distribuidas uniformemente de modo que el espacio entre cualquier par de elementos adyacentes sea el mismo. El espacio vacío antes de la primera línea y el espacio después de la última es igual a la mitad del espacio entre cualquier par de líneas adyacentes. */
+.container-24 {
+  display: flex;
+  flex-wrap: wrap;
+  height: 400px;
+  width: 500px;
+  align-content: space-around;
+  background-color: antiquewhite;
+}
+.container-24 div {
+  padding: 20px;
+  margin: 5px;
+  height: 20px;
+  background-color: crimson;
+}
+/* Las líneas son estiradas para usar el espacio sobrante. El espacio libre en el contenedor es dividido por igual entre todas las líneas.
+Nota:Para que funcione align-content: stretch , los elementos no deben tener un height */
+.container-25 {
+  display: flex;
+  flex-wrap: wrap;
+  height: 400px;
+  width: 500px;
+  align-content: stretch;
+  background-color: antiquewhite;
+}
+.container-25 div {
+  padding: 20px;
+  margin: 5px;
+  background-color: crimson;
+}
+/* 
+Con la propiedad flex-grow definida como un entero positivo, los ítems flex pueden crecer en el eje principal a partir de flex-basis. Esto hará que el ítem se ajuste y tome todo el espacio disponible del eje, o una proporción del espacio disponible si otro ítem también puede crecer.
+
+Podemos usar flex-grow apropiadamente para distribuir el espacio en proporciones. Si otorgamos al primer ítem un valor flex-grow de 2 y a los otros un valor de 1, entonces 2 partes serán dadas al primer ítem  (100px de 200px en el caso del ejemplo de arriba) y 1 parte para cada uno de los restantes (cada uno con 50px de los 200px en total).
+*/
+
+.container-26 {
+  display: flex;
+  gap: 10px;
+  background-color: antiquewhite;
+  width: 500px;
+}
+
+.box-20 {
+  width: 100px;
+  height: 80px;
+  background-color: #ac5232;
+}
+
+.box-21 {
+  width: 100px;
+  height: 80px;
+  background-color: #bece2f;
+}
+
+.box-22 {
+  width: 100px;
+  height: 80px;
+  background-color: #3297be;
+}
+
+.container-27 {
+  display: flex;
+  gap: 10px;
+  background-color: antiquewhite;
+  width: 500px;
+  margin-top: 10px;
+}
+
+.box-23 {
+  width: 100px;
+  height: 80px;
+  background-color: #ac5232;
+}
+
+.box-24 {
+  width: 100px;
+  height: 80px;
+  background-color: #bece2f;
+}
+
+.box-25 {
+  width: 100px;
+  height: 80px;
+  background-color: #3297be;
+  flex-grow: 1;
+}
+
+.container-28 {
+  display: flex;
+  gap: 10px;
+  background-color: antiquewhite;
+  width: 500px;
+  margin-top: 10px;
+}
+
+.box-26 {
+  width: 100px;
+  height: 80px;
+  background-color: #ac5232;
+  flex-grow: 1;
+}
+
+.box-27 {
+  width: 100px;
+  height: 80px;
+  background-color: #bece2f;
+  flex-grow: 2;
+}
+
+.box-28 {
+  width: 100px;
+  height: 80px;
+  background-color: #3297be;
+  flex-grow: 1;
+}
+/* la propiedad flex-shrink controla como se contrae. Si no contamos con suficiente espacio en el contenedor para colocar los ítems y flex-shrink posee un valor entero positivo, el ítem puede contraerse a partir de flex-basis. Así como podemos asignar diferentes valores de flex-grow con el fin que un ítem se expanda más rápido que otros — un ítem con un valor más alto de flex-shrink se contraerá más rápido que sus hermanos que poseen valores menores. */
+.container-29 {
+  display: flex;
+  gap: 10px;
+  background-color: antiquewhite;
+  margin-top: 10px;
+}
+
+.box-29 {
+  width: 150px;
+  height: 80px;
+  background-color: #ac5232;
+  flex-shrink: 0;
+}
+
+.box-30 {
+  width: 100px;
+  height: 80px;
+  background-color: #bece2f;
+  flex-shrink: 1;
+}
+
+.box-31 {
+  width: 200px;
+  height: 80px;
+  background-color: #3297be;
+  flex-shrink: 5;
+}
+
+/* Con flex-basis se define el tamaño de un ítem en términos del espacio que deja como espacio disponible. El valor inicial de esta propiedad es auto — en este caso el navegador revisa si los ítems definen un tamaño. En el ejemplo de arriba, todos los ítems tienen un ancho de 100 pixeles así que este es usado como flex-basis.
+
+Es una propiedad que se aplica a los hijos del container y aplica en valor que se le asigna ejemplo, si auno de los bloques le asignamos un valor de 500px este solo se expandera hasta llegar a su medida y no crecera mas , pero si se contrae el navegador se reducira los mas que pueda respetando el espacio de los demas bloques.
+*/
+.container-30 {
+  display: flex;
+  gap: 10px;
+  background-color: antiquewhite;
+  margin-top: 10px;
+}
+
+.box-32 {
+  width: 150px;
+  height: 80px;
+  background-color: #ac5232;
+}
+
+.box-33 {
+  width: 100px;
+  height: 80px;
+  background-color: #bece2f;
+  flex-basis: 800px;
+}
+
+.box-34 {
+  width: 200px;
+  height: 80px;
+  background-color: #3297be;
+}
+/* La propiedad CSS align-self alinea los elementos flexibles de la línea flexible actual, reemplazando el valor de align-items. Si el límite transversal de alguno de los elementos está definido como auto, el valor de align-self es ignorado.
+
+auto
+Se calcula acorde al valor de align-items del padre, o al de stretch si el elemento no tiene padre.
+
+flex-start
+El límite transversal inicial del elemento flexible es unido al borde transversal inicial de la línea.
+
+*/
+.container-31 {
+  display: flex;
+  height: 300px;
+  gap: 10px;
+  background-color: antiquewhite;
+  margin-top: 10px;
+  align-items: center;
+}
+
+.box-35 {
+  width: 150px;
+  height: 80px;
+  background-color: #ac5232;
+}
+
+.box-36 {
+  width: 100px;
+  height: 80px;
+  background-color: #bece2f;
+  align-self: flex-start;
+}
+
+.box-37 {
+  width: 200px;
+  height: 80px;
+  background-color: #3297be;
+}
+/* flex-end
+El límite transversal final del elemento flexible es unido al borde transversal final de la línea. */
+.container-32 {
+  display: flex;
+  height: 300px;
+  gap: 10px;
+  background-color: antiquewhite;
+  margin-top: 10px;
+  align-items: center;
+}
+
+.box-38 {
+  width: 150px;
+  height: 80px;
+  background-color: #ac5232;
+}
+
+.box-39 {
+  width: 100px;
+  height: 80px;
+  background-color: #bece2f;
+  align-self: flex-end;
+}
+
+.box-40 {
+  width: 200px;
+  height: 80px;
+  background-color: #3297be;
+}
+/* center
+Los límites del elemento flexible son centrados dentro de la línea en su eje transversal. Si el tamaño transversal del elemento es superior al del contenedor, se excederá por igual hacia ambas direcciones. */
+.container-33 {
+  display: flex;
+  height: 300px;
+  gap: 10px;
+  background-color: antiquewhite;
+  margin-top: 10px;
+}
+
+.box-41 {
+  width: 150px;
+  height: 80px;
+  background-color: #ac5232;
+}
+
+.box-42 {
+  width: 100px;
+  height: 80px;
+  background-color: #bece2f;
+  align-self: center;
+}
+
+.box-43 {
+  width: 200px;
+  height: 80px;
+  background-color: #3297be;
+}
+
+/* baseline
+los elementos flexibles son ajustados de modo que sus bases estén alineadas. El elemento con la distancia mayor entre su límite transversal inicial y su base es combinado con el borde transversal de la línea. */
+.container-34 {
+  display: flex;
+  height: 300px;
+  gap: 10px;
+  background-color: antiquewhite;
+  /* align-items: center; */
+}
+
+.box-44 {
+  width: 150px;
+  height: 80px;
+  background-color: #ac5232;
+}
+
+.box-45 {
+  background-color: #bece2f;
+  align-self: baseline;
+}
+
+.box-46 {
+  font-size: 3rem;
+  background-color: #3297be;
+  align-self: baseline;
+}
+
+/* baseline
+los elementos flexibles son ajustados de modo que sus bases estén alineadas. El elemento con la distancia mayor entre su límite transversal inicial y su base es combinado con el borde transversal de la línea. */
+
+.container-35 {
+  display: flex;
+  height: 300px;
+  gap: 10px;
+  background-color: antiquewhite;
+  margin-top: 10px;
+}
+
+.box-47 {
+  width: 150px;
+  height: 80px;
+  background-color: #ac5232;
+}
+
+.box-48 {
+  width: 100px;
+  background-color: #bece2f;
+  align-self: stretch;
+}
+
+.box-49 {
+  width: 200px;
+  height: 80px;
+  background-color: #3297be;
+}
+
+/* La propiedad CSS order especifica el orden utilizado para disponer los elementos en su contenedor flexible. Los elementos estarán dispuestos en orden ascendente según el valor de order. Los elementos con el mismo valor de order se dispondrán en el orden en el cual aparecen en el código fuente. */
+
+.container-36 {
+  display: flex;
+  height: 100px;
+  gap: 10px;
+  background-color: antiquewhite;
+  margin-top: 10px;
+}
+
+.box-50 {
+  width: 100px;
+  height: 50px;
+  margin-top: 10px;
+  margin: 10px 20px;
+  background-color: rgb(180, 180, 43);
+  order: 1;
+}
+
+.box-51 {
+  width: 100px;
+  height: 50px;
+  margin: 10px 20px;
+  background-color: crimson;
+}
+
+.box-52 {
+  width: 100px;
+  height: 50px;
+  margin: 10px 20px;
+  background-color: crimson;
+}
+
+.box-53 {
+  width: 100px;
+  height: 50px;
+  margin: 10px 20px;
+  background-color: crimson;
+}
+
+.box-54 {
+  width: 100px;
+  height: 50px;
+  margin: 10px 20px;
+  background-color: crimson;
+}
+
+.container-37 {
+  display: flex;
+  height: 100px;
+  gap: 10px;
+  background-color: antiquewhite;
+  margin-top: 10px;
+}
+
+.box-55 {
+  width: 100px;
+  height: 50px;
+  margin-top: 10px;
+  margin: 10px 20px;
+  background-color: crimson;
+}
+
+.box-56 {
+  width: 100px;
+  height: 50px;
+  margin: 10px 20px;
+  background-color: crimson;
+}
+
+.box-57 {
+  width: 100px;
+  height: 50px;
+  margin: 10px 20px;
+  background-color: crimson;
+}
+
+.box-58 {
+  width: 100px;
+  height: 50px;
+  margin: 10px 20px;
+  background-color: crimson;
+}
+
+.box-59 {
+  width: 100px;
+  height: 50px;
+  margin: 10px 20px;
+  background-color: rgb(95, 35, 190);
+  order: -1;
+}

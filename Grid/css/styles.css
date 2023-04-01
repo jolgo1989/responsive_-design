@@ -1,0 +1,1248 @@
+body {
+  background-color: #333;
+  color: #fff;
+}
+/* display: grid; */
+.grid-container {
+  display: grid;
+}
+
+.grid-container div {
+  background-color: crimson;
+  text-align: center;
+  color: white;
+  border: 1px solid black;
+}
+/* display:inline-grid */
+.grid-container1 {
+  display: inline-grid;
+}
+
+.grid-container1 div {
+  background-color: crimson;
+  text-align: center;
+  color: white;
+  border: 1px solid black;
+}
+
+/* grid-template-columns: auto auto auto */
+.grid-container2 {
+  display: grid;
+  grid-template-columns: auto auto auto;
+}
+
+.grid-container2 div {
+  background-color: crimson;
+  text-align: center;
+  color: white;
+  border: 1px solid black;
+}
+/* grid-template-columns con diferentes unidades de medidas*/
+.grid-container3 {
+  display: grid;
+  grid-template-columns: 1fr 60px;
+}
+
+.grid-container3 div {
+  background-color: crimson;
+  text-align: center;
+  color: white;
+  border: 1px solid black;
+}
+/* Define la altura de cada columna */
+.grid-container4 {
+  display: grid;
+  grid-template-columns: auto auto auto;
+  grid-template-rows: 50px auto 100px;
+}
+
+.grid-container4 div {
+  background-color: crimson;
+  text-align: center;
+  color: white;
+  border: 1px solid black;
+}
+
+/* unidad fr
+ representa una fracción del espacio disponible en el contenedor de cuadrícula */
+.grid-container5 {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+}
+
+.grid-container5 div {
+  background-color: crimson;
+  text-align: center;
+  color: white;
+  border: 1px solid black;
+}
+
+.grid-container6 {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr;
+}
+
+.grid-container6 div {
+  background-color: crimson;
+  text-align: center;
+  color: white;
+  border: 1px solid black;
+}
+
+/* Seguimiento de listados con notación de repetición ()
+Las cuadrículas grandes con muchas pistas pueden usar la repeat()notación para repetir todo o una sección de la lista de pistas. */
+.grid-container7 {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+}
+
+.grid-container7 div {
+  background-color: crimson;
+  text-align: center;
+  color: white;
+  border: 1px solid black;
+}
+
+/* Anotación repeat() para una parte de la lista de pistas */
+.grid-container8 {
+  display: grid;
+  grid-template-columns: 60px repeat(6, 1fr) 60px;
+}
+
+.grid-container8 div {
+  background-color: crimson;
+  text-align: center;
+  color: white;
+  border: 1px solid black;
+}
+/* Anotación repeat() con patrones repetitivos. */
+.grid-container9 {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr 2fr);
+}
+
+.grid-container9 div {
+  background-color: crimson;
+  text-align: center;
+  color: white;
+  border: 1px solid black;
+}
+
+/* La cuadrícula explícita y implícita.
+La cuadrícula explícita consiste en las filas y columnas que se definen con las propiedades grid-template-columns y grid-template-rows.
+
+*/
+.grid-container10 {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(4, 50px);
+}
+
+.grid-container10 div {
+  background-color: crimson;
+  text-align: center;
+  color: white;
+  border: 1px solid black;
+}
+
+/* grid-auto-rows */
+.grid-container11 {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(4, 50px);
+  grid-auto-rows: 80px;
+}
+
+.grid-container11 div {
+  background-color: crimson;
+  text-align: center;
+  color: white;
+  border: 1px solid black;
+}
+
+/* grid-auto-flow(row:valor por defecto) */
+
+.grid-container12 {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.grid-container12 div {
+  background-color: crimson;
+  text-align: center;
+  color: white;
+  border: 1px solid black;
+}
+/* grid-auto-flow: column */
+.grid-container12-1 {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-auto-flow: column;
+}
+
+.grid-container12-1 div {
+  background-color: crimson;
+  text-align: center;
+  color: white;
+  border: 1px solid black;
+}
+
+/* grid-auto-flow sin la propiedad dense */
+.grid-container12-2 {
+  border: 3px solid #000;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(1, 200px 100px 200px);
+  grid-auto-rows: 100px;
+  gap: 10px;
+}
+
+.grid-container12-2 div {
+  background-color: crimson;
+  text-align: center;
+  color: white;
+  border: 1px solid black;
+}
+
+.grid-container12-2 .span2 {
+  grid-column: span 2;
+  background-color: #ff8000;
+}
+
+.grid-container12-2 .span3 {
+  grid-column: span 3;
+  background-color: #575757;
+}
+
+/* grid-auto-flow con la propiedad dense */
+.grid-container12-3 {
+  border: 3px solid #000;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(1, 200px 100px 200px);
+  grid-auto-rows: 100px;
+  grid-auto-flow: dense;
+  gap: 10px;
+}
+
+.grid-container12-3 div {
+  background-color: crimson;
+  text-align: center;
+  color: white;
+  border: 1px solid black;
+}
+
+.grid-container12-3 .span2 {
+  grid-column: span 2;
+  background-color: #ff8000;
+}
+
+.grid-container12-3 .span3 {
+  grid-column: span 3;
+  background-color: #575757;
+}
+
+.grid-container12-4 {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-auto-flow: column;
+  grid-auto-columns: 100px;
+}
+
+.grid-container12-4 div {
+  background-color: crimson;
+  text-align: center;
+  color: white;
+  border: 1px solid black;
+}
+
+/* Tamaño de vía y minmax()
+la propiedad minmax() significa que un elemento se le establecera un valor mínimo y máximo para lo que puede ser la longitud */
+.grid-container13 {
+  display: grid;
+  grid-template-columns: minmax(300px, 1fr) 1fr 1fr;
+  grid-auto-rows: 50px;
+}
+
+.grid-container13 div {
+  background-color: crimson;
+  text-align: center;
+  color: white;
+  border: 1px solid black;
+}
+
+.grid-container14 {
+  display: grid;
+  grid-template-columns: minmax(300px, 1fr) repeat(2, 1fr);
+  grid-auto-rows: 50px;
+}
+
+.grid-container14 div {
+  background-color: crimson;
+  text-align: center;
+  color: white;
+  border: 1px solid black;
+}
+
+.grid-container15 {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(200px, 1fr));
+  grid-auto-rows: 50px;
+}
+
+.grid-container15 div {
+  background-color: crimson;
+  text-align: center;
+  color: white;
+  border: 1px solid black;
+}
+
+/*
+auto-fill y auto-fit
+  auto-fit:Coloca las columnas que haya en el espacio. Prefiere expandir columnas para llenar el espacio en lugar de columnas vacías.(hace nuestra grilla responsive) */
+
+
+
+.grid-container16 {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  grid-auto-rows: 50px;
+}
+
+.grid-container16 div {
+  background-color: crimson;
+  text-align: center;
+  color: white;
+  border: 1px solid black;
+}
+/* auto-fill:ajusta tantas columnas como sea posible en una fila, incluso si están vacías. */
+.grid-container17 {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  grid-auto-rows: 50px;
+}
+
+.grid-container17 div {
+  background-color: crimson;
+  text-align: center;
+  color: white;
+  border: 1px solid black;
+}
+
+/* min-content,max-content y fit-content
+min-content: el tamaño mínimo del contenido. Imagine una línea de texto como "E pluribus unum", el contenido mínimo es probablemente la palabra mas ancha "pluribus".
+
+max-content: el tamaño máximo del contenido. Imagina la oración de arriba, la max-contentes la longitud de la oración completa.
+
+fit-content: utiliza el espacio disponible, pero nunca menos de min-content y nunca más de max-content. */
+
+.grid-container18 {
+  display: grid;
+  grid-template-columns: min-content max-content fit-content(356px);
+  grid-auto-rows: 50px;
+}
+
+.grid-container18 div {
+  background-color: crimson;
+  text-align: center;
+  color: white;
+  border: 1px solid black;
+}
+
+/* row-gap,column-gap y gap */
+.grid-container19 {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  row-gap: 15px;
+}
+
+.grid-container19 div {
+  background-color: crimson;
+  text-align: center;
+  color: white;
+  border: 1px solid black;
+}
+
+.grid-container19-1 {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  column-gap: 15px;
+}
+
+.grid-container19-1 div {
+  background-color: crimson;
+  text-align: center;
+  color: white;
+  border: 1px solid black;
+}
+
+.grid-container19-2 {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 15px;
+}
+
+.grid-container19-2 div {
+  background-color: crimson;
+  text-align: center;
+  color: white;
+  border: 1px solid black;
+}
+
+/* align-items */
+
+.grid-container20 {
+  display: grid;
+  border: 3px solid #000;
+  grid-template-columns: repeat(3, 100px);
+  grid-auto-rows: 100px;
+  align-items: stretch; /*valor por defecto*/
+}
+
+.grid-container20 div {
+  background-color: crimson;
+  text-align: center;
+  color: white;
+  border: 1px solid black;
+}
+/* align-items: start */
+.grid-container20-1 {
+  display: grid;
+  border: 3px solid #000;
+  grid-template-columns: repeat(3, 100px);
+  grid-auto-rows: 100px;
+  align-items: start;
+}
+
+.grid-container20-1 div {
+  background-color: crimson;
+  text-align: center;
+  color: white;
+  border: 1px solid black;
+}
+/* align-items: end */
+.grid-container20-2 {
+  display: grid;
+  border: 3px solid #000;
+  grid-template-columns: repeat(3, 100px);
+  grid-auto-rows: 100px;
+  align-items: end;
+}
+
+.grid-container20-2 div {
+  background-color: crimson;
+  text-align: center;
+  color: white;
+  border: 1px solid black;
+}
+/* align-items:center */
+.grid-container20-3 {
+  display: grid;
+  border: 3px solid #000;
+  grid-template-columns: repeat(3, 100px);
+  grid-auto-rows: 100px;
+  align-items: center;
+}
+
+.grid-container20-3 div {
+  background-color: crimson;
+  text-align: center;
+  color: white;
+  border: 1px solid black;
+}
+/* align-items:baseline*/
+.grid-container20-4 {
+  display: grid;
+  border: 3px solid #000;
+  grid-template-columns: repeat(3, 100px);
+  grid-auto-rows: 100px;
+  align-items: baseline;
+}
+
+.grid-container20-4 div {
+  background-color: crimson;
+  text-align: center;
+  color: white;
+  border: 1px solid black;
+}
+
+.grid-container20-4 .grid-item1 {
+  font-size: 3rem;
+}
+
+.grid-container20-4 .grid-item2 {
+  font-size: 4rem;
+}
+
+.grid-container20-4 .grid-item3 {
+  font-size: 5rem;
+}
+
+/* justify-items: stretch */
+.grid-container21 {
+  display: grid;
+  border: 3px solid #000;
+  grid-template-columns: repeat(3, 100px);
+  grid-auto-rows: 100px;
+  justify-items: stretch; /*Valor por defecto*/
+}
+
+.grid-container21 div {
+  background-color: crimson;
+  text-align: center;
+  color: white;
+  border: 1px solid black;
+}
+
+/* justify-items: start; */
+.grid-container21-1 {
+  display: grid;
+  border: 3px solid #000;
+  grid-template-columns: repeat(3, 100px);
+  grid-auto-rows: 100px;
+  gap: 10px;
+  justify-items: start;
+}
+
+.grid-container21-1 div {
+  background-color: crimson;
+  text-align: center;
+  color: white;
+  border: 1px solid black;
+}
+
+/* justify-items:end */
+.grid-container21-2 {
+  display: grid;
+  border: 3px solid #000;
+  grid-template-columns: repeat(3, 100px);
+  grid-auto-rows: 100px;
+  gap: 10px;
+  justify-items: end;
+}
+
+.grid-container21-2 div {
+  background-color: crimson;
+  text-align: center;
+  color: white;
+  border: 1px solid black;
+}
+/* justify-items:center*/
+.grid-container21-3 {
+  display: grid;
+  border: 3px solid #000;
+  grid-template-columns: repeat(3, 100px);
+  grid-auto-rows: 100px;
+  gap: 10px;
+  justify-items: center;
+}
+
+.grid-container21-3 div {
+  background-color: crimson;
+  text-align: center;
+  color: white;
+  border: 1px solid black;
+}
+/* place-items */
+.grid-container22 {
+  display: grid;
+  border: 3px solid #000;
+  grid-template-columns: repeat(3, 100px);
+  grid-auto-rows: 150px;
+  gap: 10px;
+  place-items: center end;
+}
+
+.grid-container22 div {
+  background-color: crimson;
+  text-align: center;
+  color: white;
+  border: 1px solid black;
+}
+
+.grid-container22-1 {
+  display: grid;
+  border: 3px solid #000;
+  grid-template-columns: repeat(3, 100px);
+  grid-auto-rows: 150px;
+  gap: 10px;
+  place-items: center;
+}
+
+.grid-container22-1 div {
+  background-color: crimson;
+  text-align: center;
+  color: white;
+  border: 1px solid black;
+}
+
+/* align-content
+align-content: start */
+
+.grid-container23 {
+  display: grid;
+  gap: 10px;
+  height: 700px;
+  border: 3px solid #000;
+  grid-template-columns: repeat(3, 100px);
+  grid-auto-rows: 100px;
+  align-content: start;
+}
+
+.grid-container23 div {
+  background-color: crimson;
+  text-align: center;
+  color: white;
+  border: 1px solid black;
+}
+/* align-content:end */
+.grid-container23-1 {
+  display: grid;
+  gap: 10px;
+  height: 700px;
+  border: 3px solid #000;
+  grid-template-columns: repeat(3, 100px);
+  grid-auto-rows: 100px;
+  align-content: end;
+}
+
+.grid-container23-1 div {
+  background-color: crimson;
+  text-align: center;
+  color: white;
+  border: 1px solid black;
+}
+/* align-content:center */
+.grid-container23-2 {
+  display: grid;
+  gap: 10px;
+  height: 700px;
+  border: 3px solid #000;
+  grid-template-columns: repeat(3, 100px);
+  grid-auto-rows: 100px;
+  align-content: center;
+}
+
+.grid-container23-2 div {
+  background-color: crimson;
+  text-align: center;
+  color: white;
+  border: 1px solid black;
+}
+/* align-content:stretch */
+.grid-container23-3 {
+  display: grid;
+  gap: 10px;
+  height: 700px;
+  border: 3px solid #000;
+  grid-template-columns: repeat(3, 100px);
+  align-content: stretch;
+}
+
+.grid-container23-3 div {
+  background-color: crimson;
+  text-align: center;
+  color: white;
+  border: 1px solid black;
+}
+/* align-content: space-between */
+.grid-container23-4 {
+  display: grid;
+  gap: 10px;
+  height: 700px;
+  border: 3px solid #000;
+  grid-template-columns: repeat(3, 100px);
+  align-content: space-around;
+}
+
+.grid-container23-4 div {
+  background-color: crimson;
+  text-align: center;
+  color: white;
+  border: 1px solid black;
+}
+
+/* align-content: space-between */
+.grid-container23-5 {
+  display: grid;
+  gap: 10px;
+  height: 700px;
+  border: 3px solid #000;
+  grid-template-columns: repeat(3, 100px);
+  align-content: space-between;
+}
+
+.grid-container23-5 div {
+  background-color: crimson;
+  text-align: center;
+  color: white;
+  border: 1px solid black;
+}
+/* align-content: space-evenly */
+.grid-container23-6 {
+  display: grid;
+  gap: 10px;
+  height: 700px;
+  border: 3px solid #000;
+  grid-template-columns: repeat(3, 100px);
+  align-content: space-evenly;
+}
+
+.grid-container23-6 div {
+  background-color: crimson;
+  text-align: center;
+  color: white;
+  border: 1px solid black;
+}
+
+/* justify-content 
+ justify-content: start*/
+.grid-container24 {
+  display: grid;
+  gap: 10px;
+  border: 3px solid #000;
+  grid-template-columns: repeat(3, 100px);
+  grid-auto-rows: 100px;
+  justify-content: start;
+}
+
+.grid-container24 div {
+  background-color: crimson;
+  text-align: center;
+  color: white;
+  border: 1px solid black;
+}
+/* justify-content: end */
+.grid-container24-1 {
+  display: grid;
+  gap: 10px;
+  border: 3px solid #000;
+  grid-template-columns: repeat(3, 100px);
+  grid-auto-rows: 100px;
+  justify-content: end;
+}
+
+.grid-container24-1 div {
+  background-color: crimson;
+  text-align: center;
+  color: white;
+  border: 1px solid black;
+}
+/* justify-content:center */
+.grid-container24-2 {
+  display: grid;
+  gap: 10px;
+  border: 3px solid #000;
+  grid-template-columns: repeat(3, 100px);
+  grid-auto-rows: 100px;
+  justify-content: center;
+}
+
+.grid-container24-2 div {
+  background-color: crimson;
+  text-align: center;
+  color: white;
+  border: 1px solid black;
+}
+
+/* justify-content: stretch */
+.grid-container24-3 {
+  display: grid;
+  gap: 10px;
+  border: 3px solid #000;
+  grid-template-columns: repeat(3, auto);
+  grid-auto-rows: 20px;
+}
+
+.grid-container24-3 div {
+  background-color: crimson;
+  text-align: center;
+  color: white;
+  border: 1px solid black;
+}
+/* justify-content: space-around */
+.grid-container24-4 {
+  display: grid;
+  gap: 10px;
+  border: 3px solid #000;
+  grid-template-columns: repeat(3, 100px);
+  grid-auto-rows: 20px;
+  justify-content: space-around;
+}
+
+.grid-container24-4 div {
+  background-color: crimson;
+  text-align: center;
+  color: white;
+  border: 1px solid black;
+}
+/* justify-content: space-between */
+.grid-container24-5 {
+  display: grid;
+  gap: 10px;
+  border: 3px solid #000;
+  grid-template-columns: repeat(3, 100px);
+  grid-auto-rows: 20px;
+  justify-content: space-between;
+}
+
+.grid-container24-5 div {
+  background-color: crimson;
+  text-align: center;
+  color: white;
+  border: 1px solid black;
+}
+
+/* justify-content: space-evenly */
+.grid-container24-6 {
+  display: grid;
+  gap: 10px;
+  border: 3px solid #000;
+  grid-template-columns: repeat(3, 100px);
+  grid-auto-rows: 20px;
+  justify-content: space-evenly;
+}
+
+.grid-container24-6 div {
+  background-color: crimson;
+  text-align: center;
+  color: white;
+  border: 1px solid black;
+}
+/* place-content */
+.grid-container25 {
+  display: grid;
+  height: 200px;
+  gap: 10px;
+  border: 3px solid #000;
+  grid-template-columns: repeat(3, 100px);
+  grid-auto-rows: 20px;
+  place-content: end center;
+}
+
+.grid-container25 div {
+  background-color: crimson;
+  text-align: center;
+  color: white;
+  border: 1px solid black;
+}
+
+.grid-container25-1 {
+  display: grid;
+  height: 200px;
+  gap: 10px;
+  border: 3px solid #000;
+  grid-template-columns: repeat(3, 100px);
+  grid-auto-rows: 20px;
+  place-content: center;
+}
+
+.grid-container25-1 div {
+  background-color: crimson;
+  text-align: center;
+  color: white;
+  border: 1px solid black;
+}
+
+/* align-self */
+
+.grid-container26 {
+  display: grid;
+  gap: 10px;
+  grid-template-columns: repeat(3, 100px);
+  grid-auto-rows: 100px;
+}
+
+.grid-container26 div {
+  background-color: crimson;
+  text-align: center;
+  color: white;
+  border: 1px solid black;
+}
+
+.grid-container26 .item-1 {
+  align-self: start;
+}
+.grid-container26 .item-2 {
+  align-self: center;
+}
+
+.grid-container26 .item-3 {
+  align-self: end;
+}
+
+/*valor por defecto*/
+.grid-container26 .item-4 {
+  align-self: stretch;
+}
+
+/*  justify-self */
+.grid-container27 {
+  display: grid;
+  gap: 10px;
+  grid-template-columns: repeat(3, 100px);
+  grid-auto-rows: 100px;
+}
+
+.grid-container27 div {
+  background-color: crimson;
+  text-align: center;
+  color: white;
+  border: 1px solid black;
+}
+
+.grid-container27 .item-1 {
+  justify-self: start;
+}
+
+.grid-container27 .item-2 {
+  justify-self: center;
+}
+
+.grid-container27 .item-3 {
+  justify-self: end;
+}
+
+.grid-container27 .item-4 {
+  justify-self: stretch; /*valor por defecto*/
+}
+
+/* place-self */
+.grid-container28 {
+  display: grid;
+  gap: 10px;
+  grid-template-columns: repeat(3, 100px);
+  grid-auto-rows: 100px;
+}
+
+.grid-container28 div {
+  background-color: crimson;
+  text-align: center;
+  color: white;
+  border: 1px solid black;
+}
+
+.grid-container28 .item-1 {
+  place-self: start center;
+}
+
+.grid-container28 .item-2 {
+  place-self: center end;
+}
+
+.grid-container28 .item-3 {
+  place-self: end stretch;
+}
+
+.grid-container28-1 {
+  display: grid;
+  gap: 10px;
+  grid-template-columns: repeat(3, 100px);
+  grid-auto-rows: 100px;
+}
+
+.grid-container28-1 div {
+  background-color: crimson;
+  text-align: center;
+  color: white;
+  border: 1px solid black;
+}
+
+.grid-container28-1 .item-1 {
+  place-self: start;
+}
+
+.grid-container28-1 .item-2 {
+  place-self: center;
+}
+
+.grid-container28-1 .item-3 {
+  place-self: end;
+}
+
+/* grid-column-starty grid-column-end*/
+.grid-container29 {
+  display: grid;
+  gap: 10px;
+  grid-template-columns: repeat(5, 100px);
+  grid-auto-rows: 100px;
+}
+
+.grid-container29 div {
+  background-color: crimson;
+  text-align: center;
+  color: white;
+  border: 1px solid black;
+}
+.grid-container29 .grid-item2 {
+  grid-column-start: 2;
+  grid-column-end: 5;
+}
+
+/* grid-column  */
+.grid-container29-1 {
+  display: grid;
+  gap: 10px;
+  grid-template-columns: repeat(5, 100px);
+  grid-auto-rows: 100px;
+}
+
+.grid-container29-1 div {
+  background-color: crimson;
+  text-align: center;
+  color: white;
+  border: 1px solid black;
+}
+.grid-container29-1 .grid-item7 {
+  grid-column: 2/5;
+}
+
+/* grid-row-start vs grid-row-end */
+.grid-container30 {
+  display: grid;
+  gap: 10px;
+  grid-template-columns: repeat(5, 100px);
+  grid-auto-rows: 100px;
+}
+
+.grid-container30 div {
+  background-color: crimson;
+  text-align: center;
+  color: white;
+  border: 1px solid black;
+}
+.grid-container30 .grid-item1 {
+  grid-row-start: 1;
+  grid-row-end: 3;
+}
+/* grid-row */
+.grid-container30-1 {
+  display: grid;
+  gap: 10px;
+  grid-template-columns: repeat(5, 100px);
+  grid-auto-rows: 100px;
+}
+
+.grid-container30-1 div {
+  background-color: crimson;
+  text-align: center;
+  color: white;
+  border: 1px solid black;
+}
+.grid-container30-1 .grid-item1 {
+  grid-row: 1/3;
+}
+
+/* span */
+.grid-container31 {
+  display: grid;
+  gap: 10px;
+  grid-template-columns: repeat(5, 100px);
+  grid-auto-rows: 100px;
+}
+
+.grid-container31 div {
+  background-color: crimson;
+  text-align: center;
+  color: white;
+  border: 1px solid black;
+}
+
+.grid-container31 .grid-item1 {
+  grid-column: span 5;
+  grid-row: span 2;
+}
+
+.grid-container31-1 {
+  display: grid;
+  gap: 10px;
+  grid-template-columns: repeat(5, 100px);
+  grid-auto-rows: 100px;
+}
+
+.grid-container31-1 div {
+  background-color: crimson;
+  text-align: center;
+  color: white;
+  border: 1px solid black;
+}
+
+.grid-container31-1 .grid-item4 {
+  grid-column: span 3 / 6;
+}
+/* grid-template-areas */
+.grid-container32 {
+  display: grid;
+  grid-template-areas:
+    "header      header      header"
+    "sidebar1    contenido   sidebar2"
+    "sidebar1    widgets     sidebar2"
+    "footer      footer      footer";
+  grid-template-columns: repeat(3, 1fr);
+  grid-auto-rows: 100px;
+}
+
+.grid-container32 div {
+  background-color: crimson;
+  text-align: center;
+  color: white;
+  border: 1px solid black;
+}
+
+.grid-container32 .header {
+  grid-area: header;
+  background-color: #ff8000;
+}
+
+.grid-container32 .sidebar1 {
+  grid-area: sidebar1;
+  background-color: #575757;
+}
+
+.grid-container32 .sidebar2 {
+  grid-area: sidebar2;
+  background-color: #575757;
+}
+
+.grid-container32 .footer {
+  grid-area: footer;
+  background-color: tomato;
+}
+
+/* Cuadricula con espacio vacio */
+.grid-container32-1 {
+  display: grid;
+  grid-template-areas:
+    ". header header"
+    "sidebar1    contenido   sidebar2"
+    "sidebar1    widgets     sidebar2"
+    "footer      footer      footer";
+  grid-template-columns: repeat(3, 1fr);
+  grid-auto-rows: 100px;
+}
+
+.grid-container32-1 div {
+  background-color: crimson;
+  text-align: center;
+  color: white;
+  border: 1px solid black;
+}
+
+.grid-container32-1 .header {
+  grid-area: header;
+  background-color: #ff8000;
+}
+
+.grid-container32-1 .sidebar1 {
+  grid-area: sidebar1;
+  background-color: #575757;
+}
+
+.grid-container32-1 .sidebar2 {
+  grid-area: sidebar2;
+  background-color: #575757;
+}
+
+.grid-container32-1 .footer {
+  grid-area: footer;
+  background-color: tomato;
+}
+
+/* grid-template*/
+
+.grid-container32-2 {
+  display: grid;
+  grid-template:
+    /* Se definen las areas */
+    "header      header      header" 100px /* Se definen alto de las filas */
+    "sidebar1    contenido   sidebar2" 100px
+    "sidebar1    widgets     sidebar2" 100px
+    "footer      footer      footer" 80px / 1fr 1fr 1fr /* Se definen ancho de las columnas*/;
+}
+
+.grid-container32-2 div {
+  background-color: crimson;
+  text-align: center;
+  color: white;
+  border: 1px solid black;
+}
+
+.grid-container32-2 .header {
+  grid-area: header;
+  background-color: #ff8000;
+}
+
+.grid-container32-2 .sidebar1 {
+  grid-area: sidebar1;
+  background-color: #575757;
+}
+
+.grid-container32-2 .sidebar2 {
+  grid-area: sidebar2;
+  background-color: #575757;
+}
+
+.grid-container32-2 .footer {
+  grid-area: footer;
+  background-color: tomato;
+}
+
+/* Grid */
+.grid-container33 {
+  display: grid;
+  grid:
+    "header     header    header" 100px
+    "sidebar1   contenido sidebar2" 100px
+    "sidebar1   widgets   sidebar2" 100px
+    "footer     footer    footer" 80px /1fr 1fr 1fr;
+}
+
+.grid-container33 div {
+  background-color: crimson;
+  text-align: center;
+  color: white;
+  border: 1px solid black;
+}
+
+.grid-container33 .header {
+  grid-area: header;
+  background-color: #ff8000;
+}
+
+.grid-container33 .sidebar1 {
+  grid-area: sidebar1;
+  background-color: #575757;
+}
+
+.grid-container33 .sidebar2 {
+  grid-area: sidebar2;
+  background-color: #575757;
+}
+
+.grid-container33 .footer {
+  grid-area: footer;
+  background-color: tomato;
+}
+
+
+/* Practica */
+.grid-container34 {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  grid-auto-rows: 100px;
+  grid-template-areas: "header header header"
+                       "Sidebar  header header"
+                         "footer footer footer";
+}
+
+.grid-container34 div {
+  background-color: crimson;
+  text-align: center;
+  color: white;
+  border: 1px solid black;
+}
+
+.header {
+  grid-area: header;
+}
+

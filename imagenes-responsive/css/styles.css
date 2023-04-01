@@ -1,0 +1,9 @@
+.cotainer__img {
+  max-width: 100%;
+  height: auto;
+}
+/* Esta imagen no es responsive */
+.container__img1 {
+  width: 1000px;
+  padding-top: 20px;
+}

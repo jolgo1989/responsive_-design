@@ -1,0 +1,29 @@
+/* En lugar de usar em o px para dimensionar texto, puedes usar unidades de viewport para obtener una tipografía responsiva. Las unidades de viewport, como los porcentajes, son unidades relativas, pero se basan en objetos diferentes. Las unidades de viewport son relativas a las dimensiones del viewport (ancho o alto) de un dispositivo, y los porcentajes son relativos al tamaño del elemento contenedor padre.
+
+Las cuatro diferentes unidades de viewport son:
+
+vw (viewport width): 10vw sería el 10% del ancho del viewport.
+vh (viewport height): 3vh sería el 3% del alto del viewport.
+vmin (viewport mínimo): 70vmin sería el 70% de la dimensión más pequeña del viewport (altura o ancho).
+vmax (viewport máximo): 100vmax sería el 100% de la dimensión más grande del viewport (altura o ancho). */
+
+/* Todo: utilizar este metodo cuando se quiera trabajar en el espacio de h1 y p */
+h1 {
+  width: 80vw;
+  background-color: brown;
+  font-size: 1.5rem;
+}
+
+p {
+  width: 75vmin;
+  background-color: brown;
+  font-size: 1rem;
+}
+
+/*todo: metodo recomendado por la MDN  */
+/* El problema de hacer esto es que el usuario pierde la posibilidad de ampliar cualquier conjunto de texto configurado en unidades vw, porque ese texto siempre está en relación con el tamaño de la ventana gráfica. Por lo tanto, nunca hay que establecer texto utilizando solo unidades de ventana. */
+
+h2 {
+  font-size: calc(1.5rem + 3vw);
+  background-color: blue;
+}
